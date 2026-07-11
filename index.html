@@ -66,15 +66,14 @@ body{
 }
 
 .container{
-    width:700px;
+    width:980px;
     max-width:95%;
-    margin:40px auto;
-    padding:35px;
-    background:#d6ebff;
-    border-radius:18px;
-    box-shadow:0 15px 40px rgba(0,0,0,.18);
-    border:1px solid rgba(255,255,255,.6);
-    box-sizing:border-box;
+    margin:25px auto;
+    padding:30px;
+    background:#d8ecff;
+    border-radius:24px;
+    box-shadow:0 20px 50px rgba(0,0,0,.22);
+    border:1px solid rgba(255,255,255,.7);
 }
 
 h2{
@@ -86,16 +85,17 @@ input,
 select,
 textarea{
     width:100%;
-    padding:15px;
-    margin-top:10px;
-    margin-bottom:18px;
-    border:1px solid #d8e3ec;
-    border-radius:12px;
+    padding:16px;
+    margin-top:8px;
+    margin-bottom:16px;
+    border:2px solid #d9e6f3;
+    border-radius:16px;
     background:#ffffff;
     font-size:16px;
+    color:#333;
     box-sizing:border-box;
-    box-shadow:0 3px 10px rgba(0,0,0,.08);
-    transition:.3s;
+    transition:.25s;
+    box-shadow:0 8px 18px rgba(0,0,0,.08);
 }
 
 input:focus,
@@ -108,34 +108,49 @@ textarea:focus{
 
 button{
     width:100%;
-    padding:16px;
-    background:linear-gradient(135deg,#0b5ed7,#198754);
+    padding:18px;
+    background:#0b5ed7;
     color:white;
     border:none;
-    border-radius:10px;
+    border-radius:16px;
     font-size:18px;
-    font-weight:bold;
+    font-weight:700;
     cursor:pointer;
     transition:.3s;
+    box-shadow:0 10px 22px rgba(11,94,215,.35);
+}
+
+button:hover{
+    transform:translateY(-2px);
+    background:#0954c4;
 }
 
 
 #reply{
-    margin-top:20px;
-    padding:20px;
-    background:#ffffff;
-    border-left:5px solid #0b5ed7;
-    border-radius:12px;
-    box-shadow:0 4px 12px rgba(0,0,0,.08);
+    margin-top:25px;
+    padding:22px;
+    background:white;
+    border-radius:18px;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+    border-left:6px solid #0b5ed7;
     font-size:16px;
-    line-height:1.7;
-    color:#333;
+    line-height:1.8;
 }
 @media (max-width:768px){
 
 .container{
     padding:20px;
     margin:15px auto;
+.form-row{
+    display:flex;
+    gap:10px;
+}
+
+.form-row input,
+.form-row select{
+    width:50%;
+}
+
 }
 
 h1{
@@ -175,6 +190,8 @@ button{
 
 </div>
 
+<div class="form-row">
+
 <input
 type="text"
 id="name"
@@ -184,35 +201,36 @@ placeholder="👤 Full Name">
 type="text"
 id="phone"
 placeholder="📞 Phone Number">
+
+</div>
+
+<div class="form-row">
+
 <input
 type="email"
 id="email"
 placeholder="✉️ Email Address">
 
-<input
-type="text"
-id="address"
-placeholder="📍 Property Address">
-<label><strong>🏠 Select Roofing Service</strong></label>
-
 <select id="service">
-    <option value="">Choose a Roofing Service...</option>
+    <option value="">🏠 Roofing Service</option>
     <option>🔨 Roof Repair</option>
     <option>🏡 New Roof Installation</option>
     <option>🔍 Roof Inspection</option>
     <option>♻️ Roof Replacement</option>
     <option>🌧️ Gutter Installation</option>
-    <option>🚨 Emergency Roofing Service</option>
 </select>
 
-<label><strong>📷 Upload Roof Photo</strong></label>
+</div>
+
 <input
-type="file"
-id="photo"
-accept="image/*">
+type="text"
+id="address"
+placeholder="📍 Property Address">
+
+
 <textarea
 id="message"
-rows="6"
+rows="4"
 placeholder=" Describe your roofing problem"></textarea>
 
 <button id="submitBtn"
